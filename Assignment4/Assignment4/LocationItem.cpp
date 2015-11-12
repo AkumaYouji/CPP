@@ -13,7 +13,7 @@ using namespace std;
 #include        "Game.h"
 
 
-LocationItem::LocationItem(Location*	newLocationPtr, LocationItem*	newPrev, LocationItem*	newNext
+LocationItem::LocationItem(Location* newLocationPtr, LocationItem* newPrev, LocationItem* newNext
 	) : location_(newLocationPtr), prev_(newPrev),next_(newNext)
 	{}
 

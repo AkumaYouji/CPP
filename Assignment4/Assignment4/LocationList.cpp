@@ -12,3 +12,56 @@ using namespace std;
 #include        "Agent.h"
 #include        "Game.h"
 
+LocationList::LocationList()
+{
+	startPtr_ = NULL;
+	endPtr_ = NULL;
+	length_ = 0;
+}
+
+LocationList::~LocationList()
+{
+	delete(startPtr_);
+	delete(endPtr_);
+	delete(&length_);
+}
+
+LocationItem*	LocationList::getFirstPtr() const
+{
+	return(startPtr_);
+}
+
+LocationItem*	LocationList::getLastPtr() const
+{
+	return(endPtr_);
+}
+
+int	LocationList::getCount() const
+{
+	return(length_);
+}
+
+void LocationList::addBack(Location* newLocPtr)
+{
+	LocationItem* newLocItemPtr = new LocationItem(newLocPtr);
+	LocationItem* temp;
+
+	if (length_ == 0)//if its the first item in the list set up the loopback
+	{
+		startPtr_ = newLocItemPtr;
+		endPtr_ = newLocItemPtr;
+		//set startPtr's next and previous
+		startPtr_->setNext(endPtr_);
+		startPtr_->setPrevious(endPtr_);
+		//set endPtr's next and previous
+		endPtr_->setNext(startPtr_);
+		endPtr_->setPrevious(startPtr_);
+	} else { 
+		temp = endPtr_;
+		endPtr_ = newLocItemPtr;
+	}
+	
+
+
+	length_++;
+}

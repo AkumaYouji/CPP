@@ -15,8 +15,8 @@ public :
   //	at 'newLocationPtr', and so therefore must 'delete()' it.  No return
   //	value.
   LocationItem	(Location*	newLocationPtr,
-		 LocationItem*	newPrev,
-		 LocationItem*	newNext
+		 LocationItem*	newPrev = NULL,
+		 LocationItem*	newNext = NULL
 		);
 
   //  PURPOSE:  To release the resources of '*this'.  No parameter.  No return
