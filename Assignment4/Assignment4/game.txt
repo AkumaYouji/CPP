@@ -1,0 +1,11 @@
+game
+(
+  locationList
+  (
+    location("the front parlor","Smells old and musty in here")
+    location("the kitchen","It smells like . . . brownies baking!")
+    location("the bathroom","Surprising it smell pleasant here.")
+    location("Six Flags","The land of happiness!")
+    location("the roof","Don't look down!  I'm afraid of heights!")
+  )
+)
