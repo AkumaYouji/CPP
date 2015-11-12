@@ -1,5 +1,11 @@
 class	LocationItem
 {
+
+	LocationItem* next_;
+	LocationItem* prev_;
+	Location* location_;
+
+	
 public :
   //  PURPOSE:  To initialize '*this' to note that 'newLocationPtr' is the
   //	address of the Location instance it is supposed to hold, 'newPrev'
@@ -45,6 +51,10 @@ public :
 
 class	LocationList
 {
+
+	LocationItem* startPtr_;
+	LocationItem* endPtr_;
+	int length_;
 public :
   //  PURPOSE:  To initialize '*this' to an empty list.  No parameters.  No
   //  	return value.
