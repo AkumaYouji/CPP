@@ -11,16 +11,12 @@ public :
   //  PURPOSE:  To initialize '*this' to remember that it iterates over list
   //	'newList', and to start at 'getFirstPtr()' of list 'newList'.  No
   //	return value.
-  LocationIterator		(LocationList&		newList
-				) :
-				list_(newList),
-				itemPtr_(newList.getFirstPtr())
-				{ }
+	LocationIterator(LocationList&		newList);
 
   //  PURPOSE:  To release the resources of '*this'.  No parameters.  No return
   //  	value.
-  ~LocationIterator		()
-				{ }
+  ~LocationIterator();
+				
 
   //  V.  Accessors:
 
@@ -29,11 +25,9 @@ public :
   //  VII.  Methods that do main and misc work of class:
   //  PURPOSE:  To return a pointer to the current Location, or 'NULL' if the
   //  	list is empty.  No parameters.
-  Location*	getLocationPtr	()
-				const
-  {
-    return(itemPtr_->getLocationPtr());
-  }
+  Location*	getLocationPtr()
+	  const;
+  
 
 
   //  PURPOSE:  To make '*this' iterator go back.  Wraps around to end if

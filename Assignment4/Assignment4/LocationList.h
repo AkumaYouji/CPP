@@ -39,12 +39,12 @@ public :
   //  VI.  Mutators:
   //  PURPOSE:  To note that 'newPrev' is now comes before '*this'.  No return
   //	value.
-  void		setPrevious	(LocationItem*	newPrev
+  void		setPrevious	(LocationItem*	newPrev = NULL
 				);
 
   //  PURPOSE:  To note that 'newNext' is now comes after '*this'.  No return
   //	value.
-  void		setNext		(LocationItem*	newNext
+  void		setNext		(LocationItem*	newNext = NULL
 				);
 };
 

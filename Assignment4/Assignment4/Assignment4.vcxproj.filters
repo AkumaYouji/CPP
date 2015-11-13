@@ -56,5 +56,14 @@
     <ClCompile Include="LocationList.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LocationIterator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Agent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UserAgent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -157,12 +157,15 @@
     <ClInclude Include="Tokenizer.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Agent.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Location.cpp" />
     <ClCompile Include="LocationItem.cpp" />
+    <ClCompile Include="LocationIterator.cpp" />
     <ClCompile Include="LocationList.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Tokenizer.cpp" />
+    <ClCompile Include="UserAgent.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

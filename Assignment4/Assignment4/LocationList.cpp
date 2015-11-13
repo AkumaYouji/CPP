@@ -50,15 +50,27 @@ void LocationList::addBack(Location* newLocPtr)
 	{
 		startPtr_ = newLocItemPtr;
 		endPtr_ = newLocItemPtr;
+		
 		//set startPtr's next and previous
 		startPtr_->setNext(endPtr_);
 		startPtr_->setPrevious(endPtr_);
+		
 		//set endPtr's next and previous
 		endPtr_->setNext(startPtr_);
 		endPtr_->setPrevious(startPtr_);
 	} else { 
+		//save the old end to update refereneces 
 		temp = endPtr_;
+		
+		//asign the new itemlist to the end
 		endPtr_ = newLocItemPtr;
+		
+	//set the previous endPtr_'s next to the new end
+		temp->setNext(endPtr_);
+
+		//establish a looped link with the end and beginning and link it to previous
+		endPtr_->setNext(startPtr_);
+		endPtr_->setPrevious(temp);
 	}
 	
 

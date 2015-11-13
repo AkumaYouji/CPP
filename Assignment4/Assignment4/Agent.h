@@ -33,16 +33,13 @@ class		Agent
 public :
   //  PURPOSE:  To initialize '*this' Agent to go through the Location
   //	instances of 'locationList'.  No return value.
-  Agent				(LocationList&	locationList
-				) :
-				iterator_(locationList)
-				{ }
+	Agent(LocationList&	locationList
+		);
 
   //  PURPOSE:  To release the resources of '*this'.  No parameters.  No return
   //  	value.
-  virtual
-  ~Agent			()
-				{ }
+	virtual
+		~Agent();
 
   //  V.  Accessors:
   //  PURPOSE:  To return the name of '*this' Agent.  No parameters.
@@ -63,11 +60,7 @@ public :
 
   //  PURPOSE:  To take the action of going back.  No parameters.  No return
   //	value.
-  void		goBack		()
-  {
-    iterator_.goBack();
-  }
-	
+  void		goBack();
   //  PURPOSE:  To take the action of going forward.  No parameters.  No return
   //	value.
   void		goForward	();
@@ -126,7 +119,7 @@ public :
 };
 
 
-class		AutonomousAgent
+class		AutonomousAgent : public Agent
 {
 
 public :
